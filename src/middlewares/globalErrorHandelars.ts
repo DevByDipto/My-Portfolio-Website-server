@@ -4,7 +4,7 @@ const globalErrorHandler = (err: any, req: Request, res: Response, next: NextFun
     if (err.message) {
     // Split by newlines, last line usually contains the main message
     const lines = err.message.split("\n").map((line:any)=> line.trim());
-    console.log(lines);
+    // console.log(lines);
     
     const lastLine = lines[lines.length - 1];
     

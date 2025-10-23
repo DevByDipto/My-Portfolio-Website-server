@@ -5,6 +5,7 @@ import cors from "cors"
 import { blogRoute } from './controller/blog.controller'
 import notFound from './middlewares/notFound'
 import globalErrorHandler from './middlewares/globalErrorHandelars'
+import { authRoute } from './controller/auth.controller'
 
 export const app = express()
 
@@ -21,6 +22,7 @@ app.use(
 
 app.use('/about-me',abouMeRoute)
 app.use('/blog',blogRoute)
+app.use('/auth',authRoute)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
