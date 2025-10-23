@@ -42,8 +42,8 @@ route.get('', catchAsync(async (req, res, next) => {
 
 }))
 
-route.patch('/id', catchAsync(async (req, res, next) => {
-const id = req.query.id 
+route.patch('/:id', catchAsync(async (req, res, next) => {
+const id = req.params.id
 const payload = req.body
 console.log(id);
 
